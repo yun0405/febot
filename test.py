@@ -2,6 +2,7 @@
 import discord
 from discord.ext import commands
 import random
+import os
 bot = commands.Bot(command_prefix='!')
 
 @bot.event
@@ -113,5 +114,5 @@ async def 명령어(ctx):
     await ctx.send(embed=embed)
 
 
-
-bot.run('OTMxMDQyNzQ3OTI0NzY2Nzcx.Yd-rIQ.nkSwfi7mvlqqvES4fb0NTmLmJcY')
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
