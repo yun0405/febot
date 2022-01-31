@@ -22,7 +22,7 @@ async def hello(ctx):
 
 
 @bot.command()
-async def 가챠(ctx):
+async def 주사위(ctx):
     await ctx.send(f'{random.randint(1,100)} 이가 나왔습니다.')
 
 @bot.command()
@@ -109,7 +109,7 @@ async def 블서(ctx):
 
 @bot.command()
 async def 명령어(ctx):
-    embed = discord.Embed(title="명령어", description="!뭐먹지\n!할까\n!타로\n!가챠:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
+    embed = discord.Embed(title="명령어", description="!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
     await ctx.send(embed=embed)
 
 
