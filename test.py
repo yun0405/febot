@@ -114,5 +114,5 @@ async def 명령어(ctx):
     await ctx.send(embed=embed)
 
 
-access_token = os.environ['BOT_TOKEN']
+access_token = os.environ["BOT_TOKEN"]
 bot.run(access_token)
