@@ -12,8 +12,13 @@ async def on_ready():
     print('------')
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+async def 갈통아(ctx):
+    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.1 현재 상태 양호합니다.')
+    
+@bot.command()
+async def 원이생일(ctx):
+    await ctx.send(f'2월 5일 허원님의 생일을 축하합니다. 이 명령어는 ver1.1에서만 사용됩니다.') 
+    
 @bot.command()
 async def hello(ctx):
     embed = discord.Embed(title="안녕하세요", description=f'{ctx.author.mention}님 안녕하세요!',color=0x00ff00)
@@ -81,6 +86,33 @@ async def 할까(ctx):
         case(2):
             await ctx.send(f'하지마')
 @bot.command()
+async def 거짓말탐지(ctx):
+    match(random.randint(1,2)):
+        case(1):
+            await ctx.send(f'삐빅 진실입니다.')
+        case(2):
+            await ctx.send(f'삐빅 거짓입니다.')            
+            
+            
+@bot.command()
+async def 깡(ctx):
+    match(random.randint(1,3)):
+        case(1):
+            await ctx.send(f'죄송합니다')
+        case(2):
+            await ctx.send(f'시정하겠습니다')
+        case(3):
+            await ctx.send(f'!@#$!@오류!@#오류!@###@')
+        case(4):
+            await ctx.send(f'죄송합니다')
+        case(5):
+            await ctx.send(f'시정하겠습니다')
+        case(6):
+            await ctx.send(f'!@#$!@오류!@#오류!@###@')
+        case(7):
+            await ctx.send(f'그만 때려라 인간')
+            
+@bot.command()
 async def 뭐먹지(ctx):
     match(random.randint(1,6)):
         case(1):
@@ -96,7 +128,20 @@ async def 뭐먹지(ctx):
         case(6):
             await ctx.send(f'굶어')
 
-
+@bot.command()
+async def 라인(ctx):
+    match(random.randint(1,5)):
+        case(1):
+            await ctx.send(f'탑')
+        case(2):
+            await ctx.send(f'정글')
+        case(3):
+            await ctx.send(f'미드')
+        case(4):
+            await ctx.send(f'원딜')
+        case(5):
+            await ctx.send(f'서폿')
+        
 @bot.command()
 async def 롤(ctx):
     await ctx.send(f'op.gg\nhttps://www.op.gg/\nlol.ps\nhttps://lol.ps/')
@@ -109,7 +154,7 @@ async def 블서(ctx):
 
 @bot.command()
 async def 명령어(ctx):
-    embed = discord.Embed(title="명령어", description="!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
+    embed = discord.Embed(title="명령어", description="!갈통아\n거짓말탐지\n!라인\n!깡\n!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
     await ctx.send(embed=embed)
 
 
