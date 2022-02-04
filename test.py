@@ -13,7 +13,7 @@ async def on_ready():
 
 @bot.command()
 async def 갈통아(ctx):
-    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.1 현재 상태 양호합니다.')
+    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.1 현재 상태 양호합니다.\n갈통아 명령어가 추가되었습니다. \n거짓말탐지가 추가되었습니다. \n깡이 추가되었습니다. \n라인이 추가되었습니다. \n히든 명령어가 추가되었습니다 ')
     
 @bot.command()
 async def 원이생일(ctx):
@@ -154,7 +154,7 @@ async def 블서(ctx):
 
 @bot.command()
 async def 명령어(ctx):
-    embed = discord.Embed(title="명령어", description="!갈통아\n거짓말탐지\n!라인\n!깡\n!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
+    embed = discord.Embed(title="명령어", description="!갈통아\n!거짓말탐지\n!라인\n!깡\n!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
     await ctx.send(embed=embed)
 
 
