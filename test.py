@@ -181,7 +181,7 @@ async def 로또(ctx):
     lotto = random.sample(range(1,46),7)
     bonus = lotto.pop()
     lotto.sort()
-    embed = discord.Embed(title="로또", description="로또 예상 번호는',lotto,'+',bonus",color=0x00ff00)
+    embed = discord.Embed(title="로또", description="로또 예상 번호는",lotto,"+",bonus,color=0x00ff00)
     await ctx.send(embed=embed)    
     
 access_token = os.environ['BOT_TOKEN']
