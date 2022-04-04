@@ -175,11 +175,10 @@ async def 명령어(ctx):
     await ctx.send(embed=embed)
 
     
-    
 @bot.command()
 async def 로또(ctx):
-    embed = discord.Embed(title="로또", description="로또 예상 번호는{random.sample(range(1,46),7)}",color=0x00ff00)
-    await ctx.send(embed=embed)    
+    await ctx.send(f'로또 예상 번호는{random.sample(range(1,46),7)}')
+      
     
 access_token = os.environ['BOT_TOKEN']
 bot.run(access_token)
