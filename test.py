@@ -179,7 +179,7 @@ async def 로또(ctx):
     lotto = random.sample(range(1,46),7)
     bonus = lotto.pop()
     lotto.sort()
-    await ctx.send(f''로또 예상 번호는',lotto,'+',bonus')    
+    await ctx.send(f''로또 예상 번호는',lotto,'+','bonus')    
     
     
     
