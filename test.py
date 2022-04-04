@@ -171,7 +171,7 @@ async def 사이퍼즈(ctx):
     
 @bot.command()
 async def 명령어(ctx):
-    embed = discord.Embed(title="명령어", description="\n!방향\n!갈통아\n!거짓말\n!라인\n!깡\n!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
+    embed = discord.Embed(title="명령어", description="\n!로또\n!방향\n!갈통아\n!거짓말\n!라인\n!깡\n!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
     await ctx.send(embed=embed)
     
 @bot.command()
