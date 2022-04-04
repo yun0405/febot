@@ -13,11 +13,17 @@ async def on_ready():
 
 @bot.command()
 async def 갈통아(ctx):
-    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.2 현재 상태 양호합니다.\n히든 명령어가 삭제되었습니다.\n거짓말탐지가 거짓말로 변경되었습니다.\n타로에 역방향 키워드가 추가되었습니다.\n방향 명령어가 추가되었습니다.')
+    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.3 현재 상태 양호합니다.\n[로또]명령어가 추가되었습니다.')
     
 @bot.command()
-async def 정지생일(ctx):
-    await ctx.send(f'2월 17일 정지현님의 생일을 축하합니다. 이 명령어는 ver1.2에서만 사용됩니다.') 
+async def 철윤생일(ctx):
+    await ctx.send(f'4월 5일이 주인놈 생일입니다') 
+    
+    
+@bot.command()
+async def 주인생일(ctx):
+    await ctx.send(f'알게뭡니까')
+    
     
 @bot.command()
 async def hello(ctx):
@@ -104,7 +110,7 @@ async def 방향(ctx):
             
 @bot.command()
 async def 깡(ctx):
-    match(random.randint(1,3)):
+    match(random.randint(1,7)):
         case(1):
             await ctx.send(f'죄송합니다')
         case(2):
@@ -167,7 +173,13 @@ async def 사이퍼즈(ctx):
 async def 명령어(ctx):
     embed = discord.Embed(title="명령어", description="\n!방향\n!갈통아\n!거짓말\n!라인\n!깡\n!뭐먹지\n!할까\n!타로\n!주사위:1~100까지 숫자 랜덤출력\n!롤\n!롤체\n!블서",color=0x00ff00)
     await ctx.send(embed=embed)
-
+    
+@bot.command()
+async def 로또(ctx):
+    lotto = random.sample(range(1,46),7)
+    bonus = lotto.pop()
+    lotto.sort()
+    await ctx.send(f''로또 예상 번호는',lotto,'+',bonus')
 
 access_token = os.environ['BOT_TOKEN']
 bot.run(access_token)
