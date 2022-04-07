@@ -21,8 +21,8 @@ async def 민성생일(ctx):
     
     
 @bot.command()
-async def 주인생일(ctx):
-    await ctx.send(f'알게뭡니까')
+async def 선욱생일(ctx):
+    await ctx.send(f'선욱이의 생일은 4월 7일입니다. 생일 축하해요')
     
     
 @bot.command()
