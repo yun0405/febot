@@ -177,7 +177,7 @@ async def 명령어(ctx):
     
 @bot.command()
 async def 로또(ctx):
-    await ctx.send(f'로또 예상 번호는{random.sample(range(1,46),7)}')
+    await ctx.send(f'로또 예상 번호는{random.sample(range(1,46),6)}')
       
     
 access_token = os.environ['BOT_TOKEN']
