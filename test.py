@@ -16,8 +16,8 @@ async def 갈통아(ctx):
     await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.3 현재 상태 양호합니다.\n[로또]명령어가 추가되었습니다.')
     
 @bot.command()
-async def 철윤생일(ctx):
-    await ctx.send(f'4월 5일이 주인놈 생일입니다') 
+async def 민성생일(ctx):
+    await ctx.send(f'민성쿤의 생일은 4월 7일입니다. 생일 축하해요') 
     
     
 @bot.command()
