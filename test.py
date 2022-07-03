@@ -13,7 +13,7 @@ async def on_ready():
 
 @bot.command()
 async def 갈통아(ctx):
-    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.3 현재 상태 양호합니다.\n[로또]명령어가 추가되었습니다.')
+    await ctx.send(f'반갑습니다.{ctx.author.mention}님 철갈통ver1.3 현재 상태 양호합니다.\n[로또]명령어가 추가되었습니다!')
     
 @bot.command()
 async def 구리밍생일(ctx):
