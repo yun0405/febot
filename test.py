@@ -5,8 +5,12 @@ from dotenv import load_dotenv
 import os
 import replicate
 load_dotenv()
-bot = commands.Bot(command_prefix='!')
-
+intents = Intents.default()
+bot = commands.Bot(
+    command_prefix="!",
+    description="Runs models on Replicate!",
+    intents=intents,
+)
 @bot.event
 async def on_ready():
     print('Logged in as')
