@@ -1,16 +1,9 @@
 import discord
 from discord.ext import commands
 import random
-from dotenv import load_dotenv
 import os
-import replicate
-load_dotenv()
-intents = Intents.default()
-bot = commands.Bot(
-    command_prefix="!",
-    description="Runs models on Replicate!",
-    intents=intents,
-)
+bot = commands.Bot(command_prefix='!')
+
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -185,16 +178,7 @@ async def 명령어(ctx):
 @bot.command()
 async def 로또(ctx):
     await ctx.send(f'로또 예상 번호는{random.sample(range(1,46),6)}')
-    
-@bot.command(aliases=["sd"])
-async def 그려줘(ctx, *, prompt):
-    """Generate an image from a text prompt using the stable-diffusion model"""
-    msg = await ctx.send(f"“{prompt}”\n> Generating...")
-
-    model = replicate.models.get("stability-ai/stable-diffusion")
-    image = model.predict(prompt=prompt)[0]
-
-    await msg.edit(content=f"“{prompt}”\n{image}")      
+      
     
 access_token = os.environ['BOT_TOKEN']
 bot.run(access_token)
