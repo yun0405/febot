@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import os
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='/')
 
 @bot.event
 async def on_ready():
